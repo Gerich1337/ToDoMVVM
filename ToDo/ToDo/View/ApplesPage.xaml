@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDo.View.ApplesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Text="{Binding Sort}" x:Name="sort"/>
+            <Entry Text="{Binding Color}" x:Name="color"/>
+            <Button Command="{Binding ListViewModel.SaveAppleCommand}" CommandParameter="{Binding}" Text="add"/>
+            <Button Command="{Binding ListViewModel.DeleteAppleCommand}" CommandParameter="{Binding}" Text="del"/>
+            <Button Command="{Binding ListViewModel.BackCommand}" Text="Cancel"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
